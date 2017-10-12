@@ -3,7 +3,9 @@ let newTask = document.querySelector('.add-task-input'),
 	btnCancel = document.querySelector('.js-cancel-add-task'),
 	tasksList = document.querySelector('.tasks-list');
 
-
+newTask.onkeydown = (e) => {
+	if (e.keyCode === 13) btnConfirm.click();
+};
 btnConfirm.onclick = (e) => {
 	if (newTask.value === "") return;
 
